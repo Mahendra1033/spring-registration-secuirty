@@ -1,0 +1,44 @@
+server:
+  port: 2175
+  error:
+    include-message: always
+    include-binding-errors: always
+
+spring:
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:dcbapp
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: mahendramahiee107@gmail.com
+    password: uuiosombwhntzkeq
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+
+#  mvc:
+#    view:
+#      prefix: /employee/
+#      suffix: .jsp
+#
+#logging:
+#  file:
+#    path: src/main/webapp/importer/
+#    name: src/main/webapp/importer/importResults.jsp
+
+
